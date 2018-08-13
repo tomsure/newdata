@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	    <head>
+	    	<meta charset="UTF-8">
+		<title>个人中心>我的卡片</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../css/reset1.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../../dist/plugs/layer.mobile-v2.0/layer_mobile/need/layer.css"/>
+		
+	    </head>
+		
+	<body class="pagebody">
+		  <div class="dataset">
+		  	<p class="text_1">输入卡片进行绑定吧</p>
+		  	   <p class="data_iccid"><span>ICCID</span><input id="textB" type="text" placeholder="请输入ICCID号" class="input_text" /></p>
+		  	   <button id="inputBtn" class="inputBtn" >新增</button>
+		  </div>
+	</body>
+	<script src="../../dist/libs/jquery-2.1.4/jquery.min.js"></script>
+	<script src="../../dist/plugs/jquery.validate.min.js"></script>
+	<script src="../../dist/plugs/layer.mobile-v2.0/layer_mobile/layer.js"></script>
+	<script>
+		$(function(){
+			
+			$('#inputBtn').click(function(){
+				if($('#textB').val()==''){
+					layer.open({
+						type:0,
+						content:'请输入ICCID',
+						style:'font-size:1rem',
+						time:1
+						
+					})
+					
+				}else{
+					location.href='BindingsCard.html'
+				}
+				
+			})
+		})
+	</script>
+</html>
